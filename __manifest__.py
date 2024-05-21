@@ -1,0 +1,21 @@
+{
+    'name':"SO_SA_MO",
+'sammary' :'SO_SA_MO',
+    'description':""" SO_SA_MO""",
+   'category':'SO_SA_MO',
+    'author': 'Abo Ali',
+    'sequence':-99,
+    'version':'0.1',
+ 'depends': ['base','sale','mail','product','mrp'],
+'data': [
+'security/ir.model.access.csv',
+'views/sale_order.xml',
+'views/manufacture.xml',
+'reports/report.xml',
+'reports/sale_order_inherit_report.xml',
+],
+ 'demo':[],
+    'application': True,
+    'auto_install': False,
+    'lisence':'LGPL-3',
+}

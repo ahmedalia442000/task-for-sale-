@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sale_order_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='customer_signature']" position="after">
+                <page string="Required Specification" name="custom_page">
+                    <group>
+                        <field name="custom_related_ids" widget="one2many_list">
+                            <tree editable="bottom">
+                                                <field name="name"/>
+                                                <field name="limits"/>
+                                                <field name="batch1"/>
+                                                <field name="batch2"/>
+                                                <field name="batch3"/>
+
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="po"/>
+                </xpath>
+            <xpath expr="//field[@name='payment_term_id']" position="after">
+                    <field name="grade"/>
+                    <field name="req_bef"/>
+                </xpath>
+             <xpath expr="//sheet/div[@name='button_box']" position="inside">
+            <button name="action_view_manufacturing_orders" string="M-Orders" type="object" icon="fa-cogs" class="oe_stat_button">
+                <field name="manufacturing_order_count" widget="statinfo"/>
+            </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

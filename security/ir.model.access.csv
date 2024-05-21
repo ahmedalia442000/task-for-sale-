@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access.sale.order,access_sale_order,SO_SA_MO.model_sale_order,base.group_user,1,1,1,1
+access.mrp.production,access_mrp_production,SO_SA_MO.model_mrp_production,base.group_user,1,1,1,1
+access.custom.related.model,access_custom_related_model,SO_SA_MO.model_custom_related_model,base.group_user,1,1,1,1
+
+
+
+

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Extend the existing form view for manufacturing orders -->
+        <record id="view_mrp_production_form_inherit" model="ir.ui.view">
+            <field name="name">mrp.production.form.inherit</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <!-- Add your one2many field to the notebook page -->
+<!--                <xpath expr="//page[@name='miscellaneous']" position="after">-->
+<!--                    <group string="Required Specification"  name="custom_page">-->
+<!--                        <field name="manufacture_related_ids" widget="one2many_list">-->
+<!--                            <tree editable="bottom">-->
+<!--                                                <field name="name"/>-->
+<!--                                                <field name="limits"/>-->
+<!--                                                <field name="batch1"/>-->
+<!--                                                <field name="batch2"/>-->
+<!--                                                <field name="batch3"/>-->
+
+<!--                            </tree>-->
+<!--                        </field>-->
+<!--                    </group>-->
+<!--                </xpath>-->
+                <xpath expr="//notebook/page[@name='miscellaneous']" position="after">
+                <page string="Required Specification" name="custom_page">
+                    <group>
+                        <field name="manufacture_related_ids" widget="one2many_list">
+                            <tree editable="bottom">
+                                                <field name="name"/>
+                                                <field name="limits"/>
+                                                <field name="batch1"/>
+                                                <field name="batch2"/>
+                                                <field name="batch3"/>
+
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+/* تحديد أسلوب الحاوية */
+.container {
+    display: flex; /* استخدام تنسيق فلكس */
+    align-items: center; /* محاذاة العناصر على نفس السطر */
+}
+
+/* أسلوب العناصر في الجهة اليسرى والجهة اليمنى */
+.left, .right {
+    width: 20%; /* عرض كل عنصر كافٍ ليظهران جنبًا إلى جنب */
+}
+/*!* أسلوب الجدول *!*/
+/*table {*/
+/*    height: 50%; !* قم بضبط القيمة حسب الحاجة *!*/
+/*}*/
+
+
+@font-face {
+  font-family: 'Arial';
+  src: url('../fonts/Arial.ttf');
+  }
+
+  .Arial {
+    font-family: Arial !important;
+
+ }
